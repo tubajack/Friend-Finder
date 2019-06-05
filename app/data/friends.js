@@ -26,3 +26,5 @@ var techFriends = [
         scores: ['1','3','4','3','2','5','5','4','2','3']
     }
 ];
+
+module.exports = techFriends;

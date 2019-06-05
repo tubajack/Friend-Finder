@@ -1,2 +1,2 @@
 # Friend-Finder
-Application for finding friends using Node and Express
+This activity is a compatibility-based Friend Finder Application. 
