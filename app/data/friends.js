@@ -14,5 +14,10 @@ var techFriends = [
         name: "Ginni Rometty",
         photo: "https://ei.marketwatch.com/Multimedia/2017/02/13/Photos/ZH/MW-FF802_ibm021_20170213200120_ZH.jpg?uuid=18ecf31c-f251-11e6-a740-001cc448aede",
         scores: ['3', '4', '2', '5', '4', '5', '3', '1', '2', '4']
+    },
+    {
+        name: "Satya Nadella", 
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5NqNXDrcxxPyIUEB7513e344_t7d_WLY3jT9QOuu0KCpfdQcD", 
+        scores: ['2','3','5','5','4','3','4','5','5','4']
     }
-]
+];
