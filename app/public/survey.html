@@ -6,7 +6,7 @@
 
          <!--Get the CSS and JavaScript that we need-->
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-         <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
+         <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script> 
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
  
          <!--Font Awesome Glyphicons-->
@@ -182,7 +182,7 @@
             </select>
             <br><br>
 
-            <button class="btn btn-primary btn-large btn-block" type="submit">Submit</button>
+            <button class="btn btn-primary btn-large btn-block" id = "submit" type="submit">Submit</button>
             <br><br>
         </div>
         <footer class = "footer">
@@ -219,11 +219,15 @@
 
         <!--Now we have the javascript-->
         <script type = "text/javascript">
+        window.onload = function(){
+            
+     
             $("#submit").on("click", function(event){
+                console.log("Submitted");
                 alert("You clicked submit");
                 event.preventDefault();
 
-                if(ValidateThatForm()){
+                //if(ValidateThatForm()){
                     //Create a new object for the user's data
                     var newUser = {
                         name: $("#name").val(), 
@@ -244,6 +248,7 @@
 
                     //Ajax post to the friend api
                     $.post("/api/friends", newUser, function(data){
+                        console.log(data);
 
                         $("match-name").text(data.name);
                         $("match-image").attr("src", data.photo);
@@ -252,12 +257,12 @@
 
                     });
 
-                }else{
-                    alert("Not all fields are filled out. Go back and fill the rest of the fields out");
-                }
+                //}else{
+                    //alert("Not all fields are filled out. Go back and fill the rest of the fields out");
+                //}
 
             });
-
+        }
         </script>
     </body>
 
