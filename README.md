@@ -7,3 +7,13 @@ The application will then display the name and photo of the tech CEO with the be
 ## Technologies Used   
 **Backend**: Node.JS, Express.JS   
 **Frontend**: Bootstrap Framework  
+
+## Demo
+Friend Finder is deployed to Heroku. It can be found here.  
+
+## Installation
+To install this application, please follow these directions. 
+1. clone the git repo: git clone https://github.com/tubajack/friend-finder.git
+2. Install necessary modules with node.JS. Use npm install to do that.  
+3. Run node server.js
+4. Go to localhost:3000 in the web browser.  
