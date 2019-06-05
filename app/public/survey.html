@@ -195,6 +195,28 @@
             </div>
         </footer>
 
+        <!--Result page-->
+        <div id="results-modal" class = "modal fade">
+            <div class = "modal-dialog">
+                <div class = "modal-content">
+                    <div class = "modal-header">
+                        <h2 class = "modal-title">
+                            Best Match
+                        </h2>
+                    </div>
+                    <div class = "modal-body">
+                        <h2 id="match-name"></h2>
+                        <img id="match-image" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                    </div>
+                    <div class = "modal-foot">
+                        <button type="button" class= "btn btn-default" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--Now we have the javascript-->
         <script type = "text/javascript">
             $("#submit").on("click", function(event){
@@ -230,6 +252,18 @@
                         ]
                     };
 
+                    //Ajax post to the friend api
+                    $.post("/api/friends", newUser, function(data){
+
+                        $("match-name").text(data.name);
+                        $("match-image").attr("src", data.photo);
+
+                        $("results-modal").modal("toggle");
+
+                    });
+
+                }else{
+                    alert("Not all fields are filled out. Go back and fill the rest of the fields out");
                 }
 
             });
