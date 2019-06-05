@@ -19,7 +19,18 @@ module.exports = function(application){
 
         //How do we find the perfect friend? This is the algorithm. 
         var perfectFriendName = "";
-        var perfectFriendImage = ""; 
+        var perfectFriendImage = "";
+        var bigDifference = 1000000; //Make the difference large on purpose
+        
+        //Take a look at all of our tech friends in the list
+        for(var antonio = 0; antonio < friendsInTech.length; antonio++){
+
+            //Find the differences from each question
+            var bob = 0; //Bob is the difference
+            for(var ihab = 0; ihab < response.length; ihab++){
+                bob += Math.abs(friendsInTech[antonio].scores[ihab] - respnse[ihab]);
+            }
+        }
         
 
     })
