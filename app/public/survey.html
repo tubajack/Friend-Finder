@@ -206,7 +206,7 @@
                     </div>
                     <div class = "modal-body">
                         <h2 id="match-name"></h2>
-                        <img id="match-image" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                        <img id="match-image" src="https://specials-images.forbesimg.com/imageserve/5bb22ae84bbe6f67d2e82e05/416x416.jpg?background=000000&cropX1=904&cropX2=1403&cropY1=262&cropY2=761" alt="">
                     </div>
                     <div class = "modal-foot">
                         <button type="button" class= "btn btn-default" data-dismiss="modal">
@@ -220,18 +220,8 @@
         <!--Now we have the javascript-->
         <script type = "text/javascript">
             $("#submit").on("click", function(event){
+                alert("You clicked submit");
                 event.preventDefault();
-
-                //Validate the form
-                function ValidateThatForm(){
-                    var valid = true;
-                    $(".form-control").each(function(){
-                        if($(this).val === ""){
-                            valid = false;
-                        }
-                    });
-                    return valid;
-                }
 
                 if(ValidateThatForm()){
                     //Create a new object for the user's data
