@@ -9,4 +9,8 @@ module.exports = function(apply){
     apply.get("/survey", function(req, res){
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
+
+    apply.get("/", function(req,res){
+        res.sendFile(path.join(__dirname, "../public/home.html"))
+    })
 }
