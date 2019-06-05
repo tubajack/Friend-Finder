@@ -8,7 +8,7 @@ var PORT = 3000;
 
 //Set up the express application to handle data parsing
 application.use(express.json());
-application.use(express.urlencoded({extended: false}));
+application.use(express.urlencoded({extended: true}));
 
 //Start the server to begin listening
 application.listen(PORT, function(){
