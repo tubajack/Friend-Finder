@@ -10,6 +10,10 @@ var PORT = 3000;
 application.use(express.json());
 application.use(express.urlencoded({extended: true}));
 
+//Don't forget to import the routes
+require("./routing/apiRoutes.js")(application);
+require("./routing/htmlRoutes.js")(application);
+
 //Start the server to begin listening
 application.listen(PORT, function(){
     console.log("Application listening on PORT " + PORT);
