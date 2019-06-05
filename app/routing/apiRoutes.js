@@ -14,11 +14,12 @@ module.exports = function(application){
     application.post("/api/friends", function(req, res){
 
         //How do we reference the newUser object? Access newUser data
-        console.log(req.body);
-        res.json(req.body);
         var newUser = req.body;
+        var response = newUser.scores;
 
-        //How do we find the match? Add this to the friend database
+        //How do we find the perfect friend? This is the algorithm. 
+        var perfectFriendName = "";
+        var perfectFriendImage = ""; 
         
 
     })
