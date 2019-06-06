@@ -38,8 +38,14 @@ module.exports = function(application){
                 perfectFriendImage = friendsInTech[i].photo;
             }
         }
+
+        //Add the new user
+        friendsInTech.push(newUser);
+
+        //Send a response which is appropriate
+        res.json({status: 'OK', perfectFriendName: perfectFriendName, perfectFriendImage: perfectFriendImage});
         
 
-    })
+    });
 
 }
