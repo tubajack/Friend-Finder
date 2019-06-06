@@ -13,9 +13,9 @@ Friend Finder is deployed to Heroku. It can be found here.
 
 ## Installation
 To install this application, please follow these directions. 
-1. clone the git repo: git clone https://github.com/tubajack/friend-finder.git
+1. Clone the git repo: git clone https://github.com/tubajack/friend-finder.git
 2. Install necessary modules with node.JS. Use npm install to do that.  
-3. Run node server.js
+3. Run npm start
 
 ## Using Ports
 In order to run the web application in your local browser, set the port variable to a value of your choice.  
