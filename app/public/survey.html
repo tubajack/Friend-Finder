@@ -224,7 +224,6 @@
      
             $("#submit").on("click", function(event){
                 console.log("Submitted");
-                alert("You clicked submit");
                 event.preventDefault();
 
                 //if(ValidateThatForm()){
@@ -252,8 +251,6 @@
 
                         $("match-name").text(data.name);
                         $("match-image").attr("src", data.photo);
-
-                        $("results-modal").modal("toggle");
 
                     });
 
