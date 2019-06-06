@@ -28,7 +28,14 @@ module.exports = function(application){
             //Find the differences from each question
             var bob = 0; //Bob is the difference
             for(var ihab = 0; ihab < response.length; ihab++){
-                bob += Math.abs(friendsInTech[antonio].scores[ihab] - respnse[ihab]);
+                bob += Math.abs(friendsInTech[antonio].scores[ihab] - response[ihab]);
+            }
+
+            //What happens if we have the lowest difference 
+            if(bob < bigDifference){
+                bigDifference = bob;
+                perfectFriendName = friendsInTech[i].name;
+                perfectFriendImage = friendsInTech[i].photo;
             }
         }
         
