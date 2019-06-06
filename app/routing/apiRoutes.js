@@ -34,15 +34,15 @@ module.exports = function(application){
             //What happens if we have the lowest difference 
             if(bob < bigDifference){
                 bigDifference = bob;
-                perfectFriendName = friendsInTech[i].name;
-                perfectFriendImage = friendsInTech[i].photo;
+                perfectFriendName = friendsInTech[antonio].name;
+                perfectFriendImage = friendsInTech[antonio].photo;
             }
         }
 
         //Add the new user
         friendsInTech.push(newUser);
 
-        //Send a response which is appropriate
+        //Send a response which is appropriate after pushing the friend to the array
         res.json({status: 'OK', perfectFriendName: perfectFriendName, perfectFriendImage: perfectFriendImage});
         
 
